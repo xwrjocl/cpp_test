@@ -7,15 +7,23 @@
 //
 
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[])
+struct stPareja {
+    int A, B;
+    int LeeA() { return A; }
+    int LeeB() { return B; }
+    void GuardaA (int n) { A = n; }
+    void GuardaB (int n) { B = n; }
+} Par;
+
+int main()
 {
-
-    // insert code here...
-    // I'm adding this comment for the github.
-    // I'm adding a new comment
-    // more comments
-    std::cout << "Hello, World!\n";
+    Par.GuardaA(15);
+    Par.GuardaB(63);
+    cout << Par.LeeA() << endl;
+    cout << Par.LeeB() << endl;
+    
     return 0;
 }
 
